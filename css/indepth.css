@@ -254,7 +254,6 @@
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;	
-	display: block;
 	
 }
 
@@ -486,7 +485,7 @@
 	}
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 730px) {
 	.indepth_logo_cover img, .indepth_logo_img_cover img{
 		height: 100%;
 		width: auto;
