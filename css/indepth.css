@@ -226,9 +226,7 @@
 	z-index: 2;
 }
 
-#indepth_cover{
-	height: 757px;
-}
+
 
 
 #indepth_intro .indepth_text{
@@ -256,6 +254,8 @@
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;	
+	display: block;
+	
 }
 
 .indepth_video {
@@ -486,6 +486,40 @@
 	}
 }
 
+@media screen and (max-height: 800px) {
+	.indepth_logo_cover img, .indepth_logo_img_cover img{
+		height: 100%;
+		width: auto;
+	}
+	
+	.indepth_container_cover{
+		height: 100%;
+		margin-top: 5%;
+	}
+	
+	.indepth_logo_cover{
+		height: 25%;
+		display: table;
+		margin: auto;
+		
+		
+	}
+	
+	.indepth_logo_img_cover{
+		height: 65%;
+		display: table;
+		margin: auto;
+	}
+	
+	.indepth_container_cover{
+		display: inline-block;
+		width: 100%;
+	}
+	
+	
+	
+}
+
 @media screen and (max-width:679px) {
 	.indepth_mapa_left{
 		max-width: 320px;
@@ -533,7 +567,37 @@
 
 @media screen and (max-width: 800px) {
 
-
+	.indepth_logo_cover img, .indepth_logo_img_cover img{
+		height: auto;
+		width: 100%;
+	}
+	
+	.indepth_container_cover{
+		width:100%;
+	}
+	
+	.indepth_logo_cover{
+		height: auto;
+		width: 80%;
+		display: table;
+		margin: auto;
+		
+		
+	}
+	
+	.indepth_logo_img_cover{
+		height: auto;
+		display: table;
+		margin: auto;
+	}
+	
+	.indepth_container_cover{
+		display: table-cell;
+	}
+	
+	#indepth_cover .indepth_parallax_back{
+		display: table;
+	}
 
 	
 	.indepth_pages{
@@ -626,9 +690,10 @@
 		}
 		
 		.indepth_page_image{
-			background-size: 414px;
 			background-repeat: no-repeat;
 		}
+		
+		
 		
 		
 		
@@ -640,19 +705,14 @@
 
 @media screen and (max-width: 605px) {
 	
-	.indepth_imng_horario{
-		width: 95%;
-		margin: 15px  auto;
-		
+	.indepth_player_sep{
+		width: 320px;
+		height: 30px;
+		float: none;		
 	}
 	
-	.indepth_menu_item{
-		width: 35px;
-		height: 35px;
-	}
-	
-	.indepth_imng_horario img{
-		width: 100%;
+	.indepth_playera{
+		float: none;
 	}
 	
 	#com{
@@ -726,7 +786,10 @@
 		text-transform: uppercase;
 		font-weight: 700;
 	}
-
+	
+	.indepth_page_content{
+		background-attachment: scroll;
+	}
 	
 	
 
@@ -761,8 +824,7 @@
 	}
 	
 	#indepth_cover .indepth_parallax_back{
-		background: url(../images/Portada_movil.jpg);
-		background-size: 100% auto;
+		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-attachment: inherit;	
