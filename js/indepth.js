@@ -1,6 +1,6 @@
 var disqus_shortname = 'juanfutbol';
 var disqus_identifier;
-var disqus_url="vive-latino-otra-expresion-del-deporte";
+var disqus_url="social-network-football-league";
 var disqus_number_c=2;
 var disqus_per_page=3;
 var tamaño_total=1920;
@@ -9,6 +9,49 @@ var numeroImages2=8;
  var slider_on2=false;
  var intervalID2;
 var posicion_slider2=0;
+var share;
+
+
+$(document).on("click", ".indepth_share_logos_item" ,function(){
+	var team=$(this).attr("red");
+	share=team;
+	var text='¡Yo le voy '+team+' FC! ¿Y tú a quién escoges? Conoce a todos los equipos de la Social Network Football League';
+	var url='http://juanfutbol.com/indepth/social-network-football-league?playeras_redes='+team+'&image=http://s3.amazonaws.com/stadium-azteca.underdog.gs/page/d568d534-3e2e-42cc-a5de-d108f8b4fc02/final/images/NFL_'+team+'PLAYERA1.jpg';
+	console.log(url);
+	console.log(encodeURIComponent(url));
+	var img='<img src="http://s3.amazonaws.com/stadium-azteca.underdog.gs/page/d568d534-3e2e-42cc-a5de-d108f8b4fc02/final/images/NFL_'+team+'PLAYERA1.jpg">';
+	var title='Yo soy '+team+'  FC';
+		$("#indepth_share_card #indepth_share_image").html(img);
+		$("#indepth_share_card #indepth_share_title").html(title);
+		$("#indepth_share_card .indepth_share_text").html('¿Y tú a quién escoges? Conoce a todos los equipos de la Social Network Football League en juanfutbol');
+		$(".indepth_share_big_content").css("display","table");
+		
+	});
+	
+	
+	$(document).on("click", "#indepth_share_twiiter", function(){
+		var text = encodeURIComponent("¡Yo le voy "+share+" FC! ¿Y tú a quién escoges? Conoce a todos los equipos de la Social Network Football League");
+		var url = encodeURIComponent("http://juanfutbol.com/indepth/social-network-football-league");
+		window.open("https://twitter.com/share?text="+text+"&url="+url,"","width=500, height=300");
+		}
+	);
+	
+	$(document).on("click", "#indepth_share_fb", function(){
+		var url = encodeURIComponent("http://juanfutbol.com/indepth/social-network-football-league?playeras_redes="+share+"&image=http://s3.amazonaws.com/stadium-azteca.underdog.gs/page/d568d534-3e2e-42cc-a5de-d108f8b4fc02/final/images/NFL_"+share+"PLAYERA1.jpg");
+		window.open("https://www.facebook.com/sharer/sharer.php?u="+url,"","width=500, height=300");
+
+	});
+	
+	$(document).on("click",".indepth_share_big_content",function(){
+		$(this).hide();
+	});
+	
+	$(document).on("click",".indepth_share_card_cont",function(){
+		$(".indepth_share_big_content").show();
+	});
+	
+
+
 
 $(document).on("click", "#indepth_button_ver" ,function(){
 		var position = $(".indepth_content_top").position();
@@ -16,6 +59,8 @@ $(document).on("click", "#indepth_button_ver" ,function(){
 			scrollTop: position.top
 		}, 2000);
 	});
+	
+	
 	
 	
 	$(document).on("click",".indepth_menu_item",function(){

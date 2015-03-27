@@ -22,14 +22,23 @@
 	
 	.indepth_share_item.facebook{
 		background-image: url(../images/boton_facebook.png);
+		
+	}
+	#indepth_share_card .indepth_share_item.facebook{
+		background-color: #3660A4;
 	}
 	
 	.indepth_share_item.facebook:hover{
 		background-color: #3660A4;
 	}
 	
+	#indepth_share_card .indepth_share_item.twitter{
+		background-color: #02B2F7;
+	}
+	
 	.indepth_share_item.twitter{
 		background-image: url(../images/boton_twitter.png);
+		
 	}
 	
 	.indepth_share_item.twitter:hover{
@@ -308,13 +317,16 @@
 	letter-spacing: .8px;
 	text-align: justify;
 	color: white;
+	font-family: 'Roboto Condensed';
 }
 
 
 .indepth_page_content .indepth_title{
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 400;
 	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-family: 'Roboto';
 	text-align: center;
 }
 
@@ -409,12 +421,48 @@
 	font-size: 12px;
 	text-align: center;
 	margin-bottom: 10px;
+	font-family: 'Roboto'
 }
 
 .indepth_datos span{
 	font-weight: 300;
 }
 
+.indepth_share_logos{
+	width: 550px;
+	height: 520px;
+	margin: auto;
+	position: relative;
+	margin-top: 30px;
+	
+}
+
+.indepth_share_logos_item{
+	width: 140px;
+	position: absolute;
+	opacity: .9;
+	cursor: pointer;
+}
+
+.indepth_share_logos_item:hover{
+	width: 150px;
+	transform: translate(-4px, 4px);
+	opacity: 1;
+}
+
+
+.indepth_share_logos_item img{
+	width: 100%;
+}
+
+.indepth_text.cual{
+	color: black;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+	max-width: 420px;
+	text-align: center;
+	font-weight: 300;
+}
 /****DINAMICO****/
 
 
@@ -450,9 +498,9 @@
 	background-image: url(../images/NFL_PinterestFONDO.jpg);
 }
 
-
-
-
+#indepth_page9 {
+	background-image: url(../images/NFL_PortadaFONDO.jpg);
+}
 
 .indepth_container_cover{
 	display: table-cell;
@@ -467,6 +515,78 @@
 	display: table;
 }
 
+#indepth_share_card{
+	width: 320px;
+	height: auto;
+	display: table-cell;
+	vertical-align: middle;
+	
+	
+}
+
+.indepth_share_big_content{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top:0px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.62);
+	display: table;
+	z-index: 200;
+	display: none;
+	
+}
+
+.indepth_share_card_cont{
+	background: white;
+	width: 320px;
+	margin: auto;
+	display: table;
+}
+
+#indepth_share_image{
+	display: table;
+	width: 100%;
+}
+
+#indepth_share_image img {
+	width: 100%;
+}
+
+.indepth_share_item{
+	z-index: 300;
+}
+
+.indepth_share_info_cont{
+	width: 280px;
+	margin:  25px auto;
+}
+
+#indepth_share_title{
+	font-size: 20px;
+	margin-bottom: 8px;
+	font-weight: 600;
+}
+
+.indepth_share_text{
+	font-size: 16px;
+	font-family: 'Roboto Condensed';
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.indepth_share_compartir{
+	font-size: 12px;
+	color: #b2b2b2;
+	text-transform: uppercase;
+}
+
+.indepth_share_card_boton{
+	  margin: 10px auto;
+	  display: table;
+	  margin-top: 5px;
+
+}
 
 
 /***** menu******/
@@ -794,7 +914,35 @@
 
 }
 
+@media screen and (max-width: 550px) {
+	.indepth_share_logos{
+		width: auto;
+		height: auto;
+		max-width: 300px;
+		margin: auto;
+		display: table;
+		margin-top: 30px;
+	}
+	
+	.indepth_share_logos_item{
+		position: static;
+		width: 140px;
+		float: left;
+		margin: 5px;
+		
+	}
+	
+	.indepth_share_logos_item:hover{
+		width: 140px;
+		transform: translate(0px, 0px);
+	}
+
+}
+
 @media screen and (max-width: 414px) {
+	
+	
+	
 	
 	#indepth_image1{
 		margin:  15px auto;
@@ -840,6 +988,14 @@
 		margin-right: 7px;
 		
 	}
+	
+	.indepth_share_card_cont{
+		background: white;
+		width: 290px;
+		margin: auto;
+		display: table;
+	}
+	
 }
 	
 	@media screen and (max-width: 320px) {
@@ -848,6 +1004,16 @@
 		height: 22px;
 		
 	}
+	
+	.indepth_img_playeras{
+		display: block;
+		width: 100%;
+	}
+	
+	.indepth_playera{
+		width: 100%;
+	}
+	
 	}
 
 
